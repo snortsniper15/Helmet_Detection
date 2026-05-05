@@ -24,15 +24,6 @@ var/
 venv/
 ENV/
 
-# Datasets & Models
-Dataset/
-combined_dataset/
-models/
-runs/
-evaluation/
-quarantine/
-reports/
-
 # OS specific
 .DS_Store
 Thumbs.db

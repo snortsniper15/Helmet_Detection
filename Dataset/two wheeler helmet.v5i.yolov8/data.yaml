@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 2
+names: ['with_helmet', 'without_helmet']
+
+roboflow:
+  workspace: chetan-singh-fdjyl
+  project: two-wheeler-helmet
+  version: 5
+  license: Public Domain
+  url: https://universe.roboflow.com/chetan-singh-fdjyl/two-wheeler-helmet/dataset/5

@@ -1,0 +1,39 @@
+============================================================
+  HELMET DETECTION MODEL — EVALUATION REPORT
+============================================================
+
+MODEL: YOLOv8n
+WEIGHTS: D:\Helmet_detection\runs\helmet_detection\weights\best.pt
+
+
+--- VALIDATION SET ---
+  mAP@0.5:      0.0585 (5.8%)
+  mAP@0.5:0.95: 0.0287 (2.9%)
+  Precision:     0.1510 (15.1%)
+  Recall:        0.1318 (13.2%)
+  F1-Score:      0.1408 (14.1%)
+
+  Per-Class AP@0.5:
+    helmet: 0.1170 (11.7%)
+    no_helmet: 0.0000 (0.0%)
+
+--- TEST SET ---
+  mAP@0.5:      0.1151 (11.5%)
+  mAP@0.5:0.95: 0.0560 (5.6%)
+  Precision:     0.1972 (19.7%)
+  Recall:        0.1687 (16.9%)
+  F1-Score:      0.1818 (18.2%)
+
+  Per-Class AP@0.5:
+    helmet: 0.2301 (23.0%)
+    no_helmet: 0.0000 (0.0%)
+
+
+--- ERROR ANALYSIS ---
+  Total test images: 82
+  Helmet missed (FN): 52
+  No_helmet missed (FN): 54
+  Completely missed: 82
+  False positives: 0
+
+============================================================
