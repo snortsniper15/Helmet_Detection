@@ -31,9 +31,9 @@ if torch.cuda.is_available():
     print(f"  VRAM: {torch.cuda.get_device_properties(0).total_mem / 1024**3:.1f} GB")
 else:
     DEVICE = 'cpu'
-    BATCH_SIZE = 16
-    EPOCHS = 1  # Reduced for CPU to 1 for demonstration
-    WORKERS = 4
+    BATCH_SIZE = 8  # Reduced to avoid OOM
+    EPOCHS = 15  # Increased to 15 for better accuracy
+    WORKERS = 0  # Set to 0 to avoid memory leaks on Windows
     print("⚠ No GPU detected. Training on CPU (slower).")
     print("  Epochs reduced to 50. Install CUDA PyTorch for GPU support.")
 
@@ -60,8 +60,8 @@ def train():
     print(f"  LR schedule: Cosine annealing")
     print(f"  Early stopping patience: 20")
     
-    # Load pretrained model
-    model = YOLO('yolov8n.pt')
+    # Load the previously trained weights instead of starting from scratch
+    model = YOLO(r'D:\Helmet_detection\models\best.pt')
     
     # Train with optimized hyperparameters
     results = model.train(
