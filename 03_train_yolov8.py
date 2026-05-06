@@ -35,7 +35,7 @@ else:
     EPOCHS = 15  # Increased to 15 for better accuracy
     WORKERS = 0  # Set to 0 to avoid memory leaks on Windows
     print("⚠ No GPU detected. Training on CPU (slower).")
-    print("  Epochs reduced to 50. Install CUDA PyTorch for GPU support.")
+    print("Epochs increased to 15 for better accuracy.")
 
 
 def train():

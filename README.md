@@ -46,5 +46,3 @@ python 03_train_yolov8.py
 python 04_evaluate_model.py
 python 05_export_model.py
 ```
-
-*Note: Datasets, trained weights, and training run logs are excluded via `.gitignore` as they can exceed file size limits.*
